@@ -1,10 +1,11 @@
 # node-red-contrib-storage-s3
 
 Node-Red module to support storage of node-red configuration data in AWS S3
+
+This Node-red-contrib-storage-s3 Fork from Kieran Dolan (@kierandol) npm.js version, Change setting to use enviroments variables.
 <p>
 requires the following configuration:
 
-credentials: Should be available in a credentials file - ~/.aws/credentials on Mac/Linux or C:\Users\USERNAME\.aws\credentials on Windows
 </p>
 <p>
 settings.js: the following parameters can be added
@@ -13,6 +14,8 @@ settings.js: the following parameters can be added
 <li>awsS3Appname: optional name of application</li>
 <li>awsS3Bucket: optional name of S3 bucket to use</li>
 <li>storageModule: require('node-red-contrib-storage-s3'),</li>
+<li>awsAccessKeyId: AWS Access Key ID</li>
+<li>awsSecretAccessKey: AWS Secret Access Key</li>
 </ul>
 </p>
 

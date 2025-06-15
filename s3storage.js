@@ -78,8 +78,10 @@ var s3storage = {
         settings = _settings;
         s3BucketName = settings.awsS3Bucket ;
         appname = settings.awsS3Appname || require('os').hostname();
-        AWS.config.region = settings.awsRegion || 'eu-west-1';
-            
+        AWS.config.region = settings.awsRegion || 'us-east-1';
+        AWS.config.accessKeyId = settings.awsAccessKeyId;
+        AWS.config.secretAccessKey = settings.awsSecretAccessKey;
+        
         return when.promise(function(resolve,reject) {
             s3 = new AWS.S3();
             if (!s3BucketName) {
